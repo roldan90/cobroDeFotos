@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Fotos cobro</title>
+  </head>
+  <body>
+    
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Cobro de fotografias</h1>
+            <div class="card">
+                <div class="card-body">
+                    <form method="post" onsubmit="return calcular()" id="frmFotos">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="cantidad">Cantidad de fotos</label>
+                                <input type="text" class="form-control" id="cantidad" name="cantidad" pattern="[0-9]+">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="tipo">Tipo de foto</label>
+                                <select name="tipo" id="tipo" class="form-control">
+                                    <option value="">Selecciona tipo de color</option>
+                                    <option value="blancoNegro">Blanco y Negro</option>
+                                    <option value="color">Color</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <h3>Medidas</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="radio" name="medida" id="3x4" value="3x4"> 
+                                <label for="3x4">3 x 4</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="radio" name="medida" id="5x7" value="5x7"> 
+                                <label for="5x7">5 x 7</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6" >
+                                <input type="radio" name="medida" id="4x6" value="4x6">
+                                <label for="4x6">4 x 6</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="radio" name="medida" id="6x8" value="6x8">
+                                <label for="6x8">6 x 8</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary">Calcular</button>
+                                <span class="btn btn-warning" onclick="limpiarFormulario()">Limpiar</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" id="cantidadPagar" class="form-control" readonly>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
